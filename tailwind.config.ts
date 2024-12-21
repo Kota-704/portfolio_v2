@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        relation: ['"relation-one"', "sans-serif"],
+      },
+      zIndex: {
+        "-1": "-1",
+      },
     },
   },
   plugins: [],

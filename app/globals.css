@@ -1,3 +1,12 @@
+@import url("https://use.typekit.net/hxq1boj.css");
+
+@font-face {
+  font-family: "relation-one";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/path/to/relation-one.woff2") format("woff2");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
