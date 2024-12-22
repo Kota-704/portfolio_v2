@@ -32,7 +32,7 @@ export default function About() {
               <p className="max-w-lg font-bodoni text-xl mt-4">
                 Since starting my career as a Frontend Engineer in January 2023,
                 I’ve gained experience with technologies like React, Next.js,
-                and Tailwindcss.
+                and WordPress.
               </p>
               <p className="max-w-lg font-bodoni text-xl mt-4">
                 My passion lies in designing and developing websites that are
