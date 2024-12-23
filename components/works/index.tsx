@@ -1,6 +1,7 @@
 "use client";
 
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { WorksItem } from "@/components/worksItem";
 
 export default function Works() {
   const { ref: sectionRef, isVisible: isSectionVisible } =
@@ -9,14 +10,9 @@ export default function Works() {
   return (
     <section
       ref={sectionRef}
-      className={`about-content max-w-screen-xl mx-auto px-4 py-20 ${isSectionVisible ? " animate-fadeIn" : "opacity-0"}`}
+      className={`${isSectionVisible ? "animate-fadeIn" : "opacity-0"}`}
     >
-      <div>
-        <h2 className="text-6xl font-dm-serif">Works</h2>
-        <h3 className="text-xl font-relation">
-          What I&apos;ve been working on.
-        </h3>
-      </div>
+      <WorksItem />
     </section>
   );
 }
