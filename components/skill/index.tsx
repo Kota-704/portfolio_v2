@@ -24,7 +24,7 @@ export function Skill() {
               <SkillItem image="javascript.png" text="JavaScript" />
               <SkillItem image="typescript.png" text="TypeScript" />
               <SkillItem image="reactjs.png" text="React" />
-              <SkillItem image="next-js.svg" text="Next.js" />
+              <SkillItem image="icons8-next.js.svg" text="Next.js" />
               <SkillItem image="Vue.js_Logo_2.svg.png" text="Vue.js" />
               <SkillItem image="nuxt_green.svg" text="Nuxt.js" />
               <SkillItem image="tailwind.png" text="Tailwind CSS" />
