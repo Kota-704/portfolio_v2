@@ -17,42 +17,41 @@ export function Skill() {
         <h3 className="text-xl font-relation">What I specialize in.</h3>
         <div className="skill__content">
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif">Front-end</h3>
-            <ul className="skill__content__item__list">
+            <h3 className="text-2xl font-dm-serif mt-10">Front-end</h3>
+            <ul className="flex flex-wrap gap-10">
               <SkillItem image="html.png" text="HTML" />
               <SkillItem image="css.png" text="CSS" />
               <SkillItem image="javascript.png" text="JavaScript" />
+              <SkillItem image="typescript.png" text="TypeScript" />
               <SkillItem image="reactjs.png" text="React" />
               <SkillItem image="next-js.svg" text="Next.js" />
               <SkillItem image="Vue.js_Logo_2.svg.png" text="Vue.js" />
-              <SkillItem image="nuxt.svg" text="Nuxt.js" />
+              <SkillItem image="nuxt_green.svg" text="Nuxt.js" />
               <SkillItem image="tailwind.png" text="Tailwind CSS" />
-              <SkillItem image="typescript.png" text="TypeScript" />
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="skill__content__item__title">Back-end</h3>
-            <ul className="skill__content__item__list">
-              <li>PHP(WordPress)</li>
-              <li>Python</li>
-              <li>django</li>
+            <h3 className="text-2xl font-dm-serif mt-10">Back-end</h3>
+            <ul className="flex flex-wrap gap-10 mt12">
+              <SkillItem image="pngwing.com.png" text="PHP(WordPress)" />
+              <SkillItem image="python.png" text="Python" />
+              <SkillItem image="django.png" text="Django" />
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="skill__content__item__title">Database</h3>
-            <ul className="skill__content__item__list">
-              <li>MySQL</li>
-              <li>PostgreSQL</li>
+            <h3 className="text-2xl font-dm-serif mt-10">Database</h3>
+            <ul className="flex flex-wrap gap-10 mt12">
+              <SkillItem image="mysql.png" text="MySQL" />
+              <SkillItem image="Postgresql.png" text="PostgreSQL" />
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="skill__content__item__title">Tools</h3>
-            <ul className="skill__content__item__list">
-              <li>Git</li>
-              <li>GitHub</li>
-              <li>VS Code</li>
-              <li>Figma</li>
-              <li>Docker</li>
+            <h3 className="text-2xl font-dm-serif mt-10">Tools</h3>
+            <ul className="flex flex-wrap gap-10 mt12">
+              <SkillItem image="git.png" text="Git" />
+              <SkillItem image="github.png" text="GitHub" />
+              <SkillItem image="VSCode.png" text="VS Code" />
+              <SkillItem image="figma.png" text="Figma" />
             </ul>
           </div>
         </div>

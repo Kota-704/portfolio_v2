@@ -7,9 +7,9 @@ interface SkillItemProps {
 
 export function SkillItem({ image, text }: SkillItemProps) {
   return (
-    <li className="flex items-center gap-2">
+    <li className="flex flex-col justify-center items-center gap-2">
       <Image src={`/img/${image}`} alt={text} width={100} height={100} />
-      <p className="text-gray-700 text-sm">{text}</p>
+      <p className="text-white text-sm">{text}</p>
     </li>
   );
 }
