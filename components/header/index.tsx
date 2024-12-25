@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeaderList from "../headerList";
+import LanguageSwitcher from "../LanguageSwitcher";
 
 export default function Header() {
   return (
@@ -12,6 +13,7 @@ export default function Header() {
             </Link>
           </h1>
           <nav>
+            <LanguageSwitcher />
             <ul className="flex gap-8 text-yellow-300">
               <HeaderList href="/" text="HOME" />
               <HeaderList href="/" text="WORKS" />

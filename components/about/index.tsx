@@ -2,10 +2,14 @@
 
 import Image from "next/image";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { useTranslation } from "@/hooks/useTranslation";
 
 export default function About() {
   const { ref: sectionRef, isVisible: isSectionVisible } =
     useIntersectionObserver(0.1);
+
+  const { t } = useTranslation();
+  console.log("About component rendered with translations:", t("about.p1"));
 
   return (
     <>
@@ -30,17 +34,13 @@ export default function About() {
             </div>
             <div className="about-text">
               <p className="max-w-lg font-bodoni text-xl mt-4">
-                Since starting my career as a Frontend Engineer in January 2023,
-                I’ve gained experience with technologies like React, Next.js,
-                and WordPress.
+                {t("about.p1") as unknown as string}
               </p>
               <p className="max-w-lg font-bodoni text-xl mt-4">
-                My passion lies in designing and developing websites that are
-                not only visually striking but also highly performant.
+                {t("about.p2") as unknown as string}
               </p>
               <p className="max-w-lg font-bodoni text-xl mt-4">
-                I actively seek opportunities to challenge myself and deepen my
-                knowledge in web development.
+                {t("about.p3") as unknown as string}
               </p>
             </div>
           </div>
