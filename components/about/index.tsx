@@ -18,6 +18,9 @@ export default function About() {
     >
       <div className="about-content-inner">
         <h2 className="about-title text-6xl font-dm-serif">About Me</h2>
+        <h3 className="text-xl font-relation">
+          Who am I and what do I specialize in.
+        </h3>
         <div className="flex justify-around items-center gap-16">
           <div className="about-image mt-16">
             <Image
