@@ -2,10 +2,12 @@
 
 import { SkillItem } from "../SkillItem";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Skill() {
   const { ref: sectionRef, isVisible: isSectionVisible } =
     useIntersectionObserver(0.1);
+  const { translations } = useLanguage();
 
   return (
     <section
@@ -17,7 +19,9 @@ export function Skill() {
         <h3 className="text-xl font-relation">What I specialize in.</h3>
         <div className="skill__content">
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10">Front-end</h3>
+            <h3 className="text-2xl font-dm-serif mt-10">
+              {translations.skill.frontend}
+            </h3>
             <ul className="flex flex-wrap gap-10">
               <SkillItem image="html.png" text="HTML" />
               <SkillItem image="css.png" text="CSS" />
@@ -31,7 +35,9 @@ export function Skill() {
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10">Back-end</h3>
+            <h3 className="text-2xl font-dm-serif mt-10">
+              {translations.skill.backend}
+            </h3>
             <ul className="flex flex-wrap gap-10 mt12">
               <SkillItem image="pngwing.com.png" text="PHP(WordPress)" />
               <SkillItem image="python.png" text="Python" />
@@ -39,14 +45,18 @@ export function Skill() {
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10">Database</h3>
+            <h3 className="text-2xl font-dm-serif mt-10">
+              {translations.skill.database}
+            </h3>
             <ul className="flex flex-wrap gap-10 mt12">
               <SkillItem image="mysql.png" text="MySQL" />
               <SkillItem image="Postgresql.png" text="PostgreSQL" />
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10">Tools</h3>
+            <h3 className="text-2xl font-dm-serif mt-10">
+              {translations.skill.tools}
+            </h3>
             <ul className="flex flex-wrap gap-10 mt12">
               <SkillItem image="git.png" text="Git" />
               <SkillItem image="github.png" text="GitHub" />

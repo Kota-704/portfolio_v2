@@ -4,6 +4,13 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 type Language = "en" | "ja";
 
+interface Work {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
+
 interface Translations {
   header: {
     toggleLanguage: string;
@@ -13,8 +20,12 @@ interface Translations {
     p2: string;
     p3: string;
   };
-  works: {
-    works1_title: string;
+  works: Work[];
+  skill: {
+    frontend: string;
+    backend: string;
+    database: string;
+    tools: string;
   };
 }
 
@@ -37,7 +48,8 @@ export const LanguageProvider = ({
   const [translations, setTranslations] = useState<Translations>({
     header: { toggleLanguage: "" },
     about: { p1: "", p2: "", p3: "" },
-    works: { works1_title: "" },
+    works: [],
+    skill: { frontend: "", backend: "", database: "", tools: "" },
   });
 
   useEffect(() => {
