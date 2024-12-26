@@ -1,18 +1,12 @@
-import type { AppProps } from "next/app";
-import Head from "next/head";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import { LanguageProvider } from "@/context/LanguageContext";
+
+import { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <>
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <LanguageProvider>
       <Component {...pageProps} />
-    </>
+    </LanguageProvider>
   );
 }
 
