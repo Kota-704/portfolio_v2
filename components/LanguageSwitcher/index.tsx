@@ -3,7 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 
 export function LanguageSwitcher() {
-  const { language, toggleLanguage, translations } = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
 
   return (
     <div className="flex items-center gap-4">
@@ -20,12 +20,6 @@ export function LanguageSwitcher() {
           }`}
         ></div>
       </div>
-      <button
-        onClick={toggleLanguage}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
-        {translations.header?.toggleLanguage}
-      </button>
     </div>
   );
 }
