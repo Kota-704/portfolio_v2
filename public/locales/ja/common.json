@@ -7,7 +7,42 @@
     "p2": "コストを抑えたい場合はHTML/CSSを用いたシンプルなサイトを、デザインやパフォーマンスを気にしたい方はNext.jsを用いたサイトをお勧めします。",
     "p3": "お問い合わせはCONTACTからお気軽にお問い合わせください。"
   },
-  "works": {
-    "works1_title": "セリタホームズ"
+  "works": [
+    {
+      "title": "セリタホームズ",
+      "description": "洗練されたデザインのレスポンシブなWordPressランディングページ。",
+      "image": "/img/works6.png",
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+    },
+    {
+      "title": "UTAGE SAPPORO",
+      "description": "洗練されたデザインのレスポンシブなWordPressサイト。",
+      "image": "/img/works7.png",
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+    },
+    {
+      "title": "Steppin'",
+      "description": "個人のポートフォリオや小規模ビジネス向けのモダンデザイン。",
+      "image": "/img/works1.png",
+      "tags": ["#WordPress", "#デザイン"]
+    },
+    {
+      "title": "川越ホームスミスショー",
+      "description": "高度な商品フィルタリングを備えたレスポンシブなECサイト。",
+      "image": "/img/works9.png",
+      "tags": ["#HTML", "#CSS", "#Javascript", "#Cording"]
+    },
+    {
+      "title": "Fertum",
+      "description": "洗練されたデザインのレスポンシブなWordPressサイト。",
+      "image": "/img/works8.png",
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+    }
+  ],
+  "skill": {
+    "frontend": "フロントエンド",
+    "backend": "バックエンド",
+    "database": "データベース",
+    "tools": "ツール"
   }
 }
