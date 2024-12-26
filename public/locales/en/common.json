@@ -1,4 +1,7 @@
 {
+  "header": {
+    "toggleLanguage": "Switch to Japanese"
+  },
   "about": {
     "p1": "Since starting my career as a Frontend Engineer in January 2023, I’ve gained experience with technologies like React, Next.js, and WordPress.",
     "p2": "My passion lies in designing and developing websites that are not only visually striking but also highly performant.",
