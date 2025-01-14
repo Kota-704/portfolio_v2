@@ -45,7 +45,7 @@ export function Skill() {
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10">
+            <h3 className="text-2xl font-dm-serif mt-10 mb-4">
               {translations.skill.database}
             </h3>
             <ul className="flex flex-wrap gap-10 mt12">
@@ -54,7 +54,7 @@ export function Skill() {
             </ul>
           </div>
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10">
+            <h3 className="text-2xl font-dm-serif mt-10 mb-4">
               {translations.skill.tools}
             </h3>
             <ul className="flex flex-wrap gap-10 mt12">
