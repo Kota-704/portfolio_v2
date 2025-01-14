@@ -7,7 +7,8 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function About() {
   const { ref: sectionRef, isVisible: isSectionVisible } =
     useIntersectionObserver(0.1);
-  const { translations } = useLanguage();
+
+  const { language, translations } = useLanguage();
 
   return (
     <section
@@ -31,16 +32,15 @@ export default function About() {
               className="w-64 h-96 rounded-full object-cover"
             />
           </div>
-          <div className="about-text">
-            <p className="max-w-lg font-bodoni text-xl mt-4">
-              {translations.about?.p1}
-            </p>
-            <p className="max-w-lg font-bodoni text-xl mt-4">
-              {translations.about?.p2}
-            </p>
-            <p className="max-w-lg font-bodoni text-xl mt-4">
-              {translations.about?.p3}
-            </p>
+          <div
+            className={`about-text ${
+              language === "ja" ? "font-notosans" : "font-bodoni"
+            }
+            ${language === "ja" ? "text-lg" : "text-xl"}`}
+          >
+            <p className="max-w-lg mt-4">{translations.about?.p1}</p>
+            <p className="max-w-lg mt-4">{translations.about?.p2}</p>
+            <p className="max-w-lg mt-4">{translations.about?.p3}</p>
           </div>
         </div>
       </div>

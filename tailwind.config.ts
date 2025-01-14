@@ -16,6 +16,8 @@ export default {
         relation: ['"relation-one"', "sans-serif"],
         "dm-serif": ['"DM Serif Text"', "serif"],
         bodoni: ['"Bodoni Moda"', "cursive"],
+        mplus: ["var(--font-m-plus-rounded-1c)", "sans-serif"],
+        notosans: ["var(--font-Noto-Sans-JP)", "sans-serif"],
       },
       fontWeight: {
         regular: "400",
