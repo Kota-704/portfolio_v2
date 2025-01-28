@@ -34,7 +34,7 @@ export function Skill() {
               <SkillItem image="tailwind.png" text="Tailwind CSS" />
             </ul>
           </div>
-          <div className="skill__content__item">
+          {/* <div className="skill__content__item">
             <h3 className="text-2xl font-dm-serif mt-10">
               {translations.skill.backend}
             </h3>
@@ -52,7 +52,7 @@ export function Skill() {
               <SkillItem image="mysql.png" text="MySQL" />
               <SkillItem image="Postgresql.png" text="PostgreSQL" />
             </ul>
-          </div>
+          </div> */}
           <div className="skill__content__item">
             <h3 className="text-2xl font-dm-serif mt-10 mb-4">
               {translations.skill.tools}
