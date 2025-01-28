@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "i18next": "^24.2.0",
+    "microcms-js-sdk": "^3.1.2",
     "next": "^15.1.2",
     "next-i18next": "^15.4.1",
     "react": "^19.0.0",
