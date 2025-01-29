@@ -16,6 +16,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --focus-ring-color: #8e6ef1;
 }
 
 @media (prefers-color-scheme: dark) {
