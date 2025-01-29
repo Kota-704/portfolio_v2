@@ -17,7 +17,7 @@ export default function Header() {
             <HeaderList href="/" text="HOME" />
             <HeaderList href="/" text="WORKS" />
             <HeaderList href="/" text="SKILL" />
-            <HeaderList href="/" text="BLOG" />
+            <HeaderList href="/blog" text="BLOG" />
             <HeaderList href="/" text="CONTACT" />
           </ul>
         </nav>
