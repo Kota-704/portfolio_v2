@@ -25,7 +25,7 @@ export default function About() {
         <div className="flex justify-around items-center gap-16">
           <div className="about-image mt-16">
             <Image
-              src="/img/fv.jpg"
+              src="/img/IMG_2757.jpg"
               alt="about_image"
               width={1706}
               height={960}
