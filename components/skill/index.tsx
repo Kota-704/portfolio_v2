@@ -7,7 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 export function Skill() {
   const { ref: sectionRef, isVisible: isSectionVisible } =
     useIntersectionObserver(0.1);
-  const { translations } = useLanguage();
+  const { language, translations } = useLanguage();
 
   return (
     <section
@@ -19,7 +19,11 @@ export function Skill() {
         <h3 className="text-xl font-relation">What I specialize in.</h3>
         <div className="skill__content">
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10">
+            <h3
+              className={`text-2xl mt-10
+            ${language === "ja" ? "font-notosans" : "font-dm-serif"}
+            ${language === "ja" ? "text-lg" : "text-xl"}`}
+            >
               {translations.skill.frontend}
             </h3>
             <ul className="flex flex-wrap gap-10">
@@ -54,7 +58,11 @@ export function Skill() {
             </ul>
           </div> */}
           <div className="skill__content__item">
-            <h3 className="text-2xl font-dm-serif mt-10 mb-4">
+            <h3
+              className={`text-2xl mt-10 mb-4
+            ${language === "ja" ? "font-notosans" : "font-dm-serif"}
+            ${language === "ja" ? "text-lg" : "text-xl"}`}
+            >
               {translations.skill.tools}
             </h3>
             <ul className="flex flex-wrap gap-10 mt12">
