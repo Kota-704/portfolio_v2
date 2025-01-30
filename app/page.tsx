@@ -4,6 +4,7 @@ import Hero from "../components/hero";
 import Works from "../components/works";
 import { Skill } from "@/components/skill";
 import { Contact } from "@/components/contact";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Skill />
         <Contact />
       </main>
+      <Footer />
     </>
   );
 }
