@@ -13,7 +13,7 @@ export default function About() {
   return (
     <section
       ref={sectionRef}
-      className={`about-content max-w-screen-xl mx-auto px-4 py-20 ${
+      className={`container about-content max-w-screen-xl mx-auto px-4 py-20 ${
         isSectionVisible ? " animate-fadeIn" : "opacity-0"
       }`}
     >
