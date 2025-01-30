@@ -7,7 +7,7 @@ export default function Hero() {
           backgroundImage: "url(/img/hero_background.png)",
         }}
       ></section>
-      <div className="hero-content text-center flex flex-col justify-center items-center h-screen">
+      <div className="text-center flex flex-col justify-center items-center h-screen">
         <h2 className="text-6xl text-white font-relation">
           Kota&apos;s Portfolio
         </h2>
