@@ -1,45 +1,97 @@
 "use client";
 
+import { useState } from "react";
 import { TextField, Label, Input, TextArea } from "react-aria-components";
+import { contactFormSubmit } from "@/lib/api";
 
 export function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  // 入力値を更新する関数
+  const handleChange = (field: string, value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  // フォーム送信処理
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSuccessMessage("");
+    setErrorMessage("");
+
+    try {
+      await contactFormSubmit(formData);
+      setSuccessMessage("Your message has been sent successfully!");
+      setFormData({ name: "", email: "", message: "" }); // フォームリセット
+    } catch (error) {
+      setErrorMessage("Failed to send message. Please try again.");
+      console.error("Error submitting contact form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div className="max-w-screen-xl mx-auto px-4 py-20">
       <h2 className="about-title text-6xl font-dm-serif">Contact</h2>
       <h3 className="text-xl font-relation mb-8">Get in Touch with Me</h3>
-      <TextField className="flex flex-col mb-4 w-full m-auto">
-        <Label>Name</Label>
-        <Input
-          className="p-1 m-0 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <TextField className="flex flex-col mb-4 w-full m-auto">
+          <Label>Name</Label>
+          <Input
+            className="p-1 m-0 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
               [&[data-focused]]:outline [&[data-focused]]:outline-2
               [&[data-focused]]:outline-offset-[-1px] [&[data-focused]]:outline-[var(--focus-ring-color)]"
-        />
-      </TextField>
-      <TextField className="flex flex-col mb-4 w-full m-auto">
-        <Label>E-mail</Label>
-        <Input
-          className="p-1 m-0 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
+            value={formData.name}
+            onChange={(e) => handleChange("name", e.target.value)}
+            required
+          />
+        </TextField>
+        <TextField className="flex flex-col mb-4 w-full m-auto">
+          <Label>E-mail</Label>
+          <Input
+            className="p-1 m-0 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
               [&[data-focused]]:outline [&[data-focused]]:outline-2
               [&[data-focused]]:outline-offset-[-1px] [&[data-focused]]:outline-[var(--focus-ring-color)]"
-        />
-      </TextField>
-      <TextField className="flex flex-col mb-4 w-full m-auto">
-        <Label className="mb-1 text-lg">Message</Label>
-        <TextArea
-          className="p-2 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
+            value={formData.email}
+            onChange={(e) => handleChange("email", e.target.value)}
+            required
+          />
+        </TextField>
+        <TextField className="flex flex-col mb-4 w-full m-auto">
+          <Label className="mb-1 text-lg">Message</Label>
+          <TextArea
+            className="p-2 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
                   [&[data-focused]]:outline [&[data-focused]]:outline-2
                   [&[data-focused]]:outline-offset-[-1px] [&[data-focused]]:outline-[var(--focus-ring-color)]"
-        />
-      </TextField>
-      <div className="flex justify-end mt-8">
-        <button
-          className="bg-blue-500 text-white px-6 py-2 rounded shadow-md
+            value={formData.message}
+            onChange={(e) => handleChange("message", e.target.value)}
+            required
+          />
+        </TextField>
+
+        {/* メッセージ表示エリア */}
+        {successMessage && <p className="text-green-500">{successMessage}</p>}
+        {errorMessage && <p className="text-red-500">{errorMessage}</p>}
+
+        <div className="flex justify-end mt-8">
+          <button
+            className="bg-blue-500 text-white px-6 py-2 rounded shadow-md
                    hover:bg-blue-600 hover:scale-105 hover:shadow-lg
                    transition-transform duration-200"
-        >
-          Submit
-        </button>
-      </div>
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? "Submitting..." : "Submit"}
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
