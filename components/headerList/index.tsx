@@ -7,7 +7,7 @@ interface HeaderListProps {
 
 export default function HeaderList({ href, text }: HeaderListProps) {
   return (
-    <li className="hover:text-white">
+    <li className="flex items-center hover:text-white">
       <Link
         href={href}
         className="text-xl transition-colors duration-300 ease-in-out font-dm-serif font-medium"
