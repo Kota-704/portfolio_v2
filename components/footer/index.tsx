@@ -1,10 +1,14 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="footer footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
         <a className="link link-hover">WORKS</a>
         <a className="link link-hover">SKILL</a>
-        <a className="link link-hover">BLOG</a>
+        <Link href="/blog" className="link link-hover">
+          BLOG
+        </Link>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
