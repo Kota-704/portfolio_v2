@@ -5,11 +5,13 @@ import { Button } from "react-aria-components";
 import type { PressEvent } from "@react-types/shared";
 import { useLanguage } from "@/context/LanguageContext";
 
+// 座標の型定義
 interface Coords {
   x: number;
   y: number;
 }
 
+// RippleButton コンポーネントの Props 型定義
 interface RippleButtonProps {
   onPress: (e: PressEvent) => void;
   children: React.ReactNode;
@@ -23,19 +25,23 @@ function RippleButton({ onPress, children }: RippleButtonProps) {
   const handlePress = (e: PressEvent): void => {
     if (e.pointerType === "mouse" && buttonRef.current) {
       const rect = buttonRef.current.getBoundingClientRect();
-      const mouseEvent = e as unknown as React.MouseEvent<
-        HTMLButtonElement,
-        MouseEvent
-      >;
-      const x = mouseEvent.clientX - rect.left;
-      const y = mouseEvent.clientY - rect.top;
+      // PressEvent を MouseEvent としてキャストしてクリック位置を取得
+      const mouseEvent = e as unknown as MouseEvent;
+      const clientX = mouseEvent.clientX;
+      const clientY = mouseEvent.clientY;
+      const x = clientX - rect.left;
+      const y = clientY - rect.top;
       setCoords({ x, y });
       if (timeout.current) {
         clearTimeout(timeout.current);
       }
       timeout.current = setTimeout(() => setCoords(null), 600);
-    } else {
-      setCoords({ x: 0, y: 0 });
+    } else if (buttonRef.current) {
+      // マウス以外の場合はボタン中央を使用する
+      const rect = buttonRef.current.getBoundingClientRect();
+      const x = rect.width / 2;
+      const y = rect.height / 2;
+      setCoords({ x, y });
       if (timeout.current) {
         clearTimeout(timeout.current);
       }
@@ -69,8 +75,8 @@ function RippleButton({ onPress, children }: RippleButtonProps) {
           className="absolute h-8 w-8 rounded-full opacity-100 bg-white/60"
           style={{
             animation: "ripple 600ms linear",
-            left: coords.x - 15,
-            top: coords.y - 15,
+            left: `${coords.x - 15}px`,
+            top: `${coords.y - 15}px`,
           }}
         />
       )}
@@ -85,6 +91,7 @@ export function LanguageSwitcher() {
     language === "en" ? "日本語に切り替える" : "Switch to English";
 
   return (
+    // toggleLanguage は引数を使わないため、単純にラッパー関数で呼び出しています
     <RippleButton onPress={() => toggleLanguage()}>{buttonText}</RippleButton>
   );
 }
