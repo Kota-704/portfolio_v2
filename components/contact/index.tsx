@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { TextField, Label, Input, TextArea } from "react-aria-components";
-import { contactFormSubmit } from "@/lib/api";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -14,12 +13,11 @@ export function Contact() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
 
-  // 入力値を更新する関数
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  // フォーム送信処理
+  // 入力値を更新する関数
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -27,12 +25,24 @@ export function Contact() {
     setErrorMessage("");
 
     try {
-      await contactFormSubmit(formData);
-      setSuccessMessage("Your message has been sent successfully!");
-      setFormData({ name: "", email: "", message: "" }); // フォームリセット
+      // API Route (server side) へ送信
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send message");
+      }
+
+      const data = await res.json();
+      setSuccessMessage(data.message || "Success!");
+      // フォームリセット
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       setErrorMessage("Failed to send message. Please try again.");
-      console.error("Error submitting contact form:", error);
+      console.error(error);
     } finally {
       setIsSubmitting(false);
     }
