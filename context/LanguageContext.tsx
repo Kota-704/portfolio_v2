@@ -28,6 +28,11 @@ interface Translations {
     database: string;
     tools: string;
   };
+  contact: {
+    name: string;
+    email: string;
+    message: string;
+  };
 }
 
 interface LanguageContextProps {
@@ -52,6 +57,7 @@ export const LanguageProvider = ({
     about: { p1: "", p2: "", p3: "" },
     works: [],
     skill: { frontend: "", backend: "", database: "", tools: "" },
+    contact: { name: "", email: "", message: "" },
   });
 
   useEffect(() => {
