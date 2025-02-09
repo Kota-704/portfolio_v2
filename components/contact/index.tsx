@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { TextField, Label, Input, TextArea } from "react-aria-components";
+import { useLanguage } from "@/context/LanguageContext";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,8 @@ export function Contact() {
   const handleChange = (field: string, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
+
+  const { language, translations } = useLanguage();
 
   // 入力値を更新する関数
   const handleSubmit = async (e: React.FormEvent) => {
@@ -49,12 +52,12 @@ export function Contact() {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto px-4 py-20">
+    <div className="max-w-screen-xl mx-auto px-4 py-20" id="contact">
       <h2 className="about-title text-6xl font-dm-serif">Contact</h2>
       <h3 className="text-xl font-relation mb-8">Get in Touch with Me</h3>
       <form onSubmit={handleSubmit} className="space-y-4">
         <TextField className="flex flex-col mb-4 w-full m-auto">
-          <Label>Name</Label>
+          <Label>{translations.contact.name}</Label>
           <Input
             className="p-1 m-0 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
               [&[data-focused]]:outline [&[data-focused]]:outline-2
@@ -65,7 +68,7 @@ export function Contact() {
           />
         </TextField>
         <TextField className="flex flex-col mb-4 w-full m-auto">
-          <Label>E-mail</Label>
+          <Label>{translations.contact.email}</Label>
           <Input
             className="p-1 m-0 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
               [&[data-focused]]:outline [&[data-focused]]:outline-2
@@ -76,7 +79,7 @@ export function Contact() {
           />
         </TextField>
         <TextField className="flex flex-col mb-4 w-full m-auto">
-          <Label className="mb-1 text-lg">Message</Label>
+          <Label className="mb-1 text-lg">{translations.contact.message}</Label>
           <TextArea
             className="p-2 border border-solid border-gray-400 bg-[var(--background)] rounded-md text-xl
                   [&[data-focused]]:outline [&[data-focused]]:outline-2
@@ -98,7 +101,11 @@ export function Contact() {
                    transition-transform duration-200"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Submitting..." : "Submit"}
+            {isSubmitting
+              ? "Submitting..."
+              : language === "ja"
+                ? "送信"
+                : "Submit"}
           </button>
         </div>
       </form>
