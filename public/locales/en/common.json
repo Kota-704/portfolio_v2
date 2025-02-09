@@ -10,33 +10,35 @@
   "works": [
     {
       "title": "Serita Homes",
-      "description": "A fully responsive WordPress Landing Page with a clean and modern design.",
+      "description": "[Overview]\nI created a landing page for Serita Homes Co., Ltd. The design reflects the company's brand image while focusing on a simple and user-friendly UI.\n\n[Technologies Used]\nPHP (WordPress), Sass, JavaScript, Swiper.js (slider implementation), IntersectionObserver (scroll animation)\n\n[Key Features]\n- Dynamic content generation using WordPress\n- Contact Form 7 for inquiry form\n\n[Highlights]\n- Responsive slider with Swiper.js & auto-scroll\n- Improved UX with lazy loading using IntersectionObserver",
       "image": "/img/works6.png",
-      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Coding"],
+      "url": "https://this-house.jp/"
     },
     {
       "title": "UTAGE SAPPORO",
-      "description": "A fully responsive WordPress site with a clean and modern design.",
+      "description": "[Overview]\nI created a homepage for UTAGE SAPPORO. The design incorporates neon-like effects to reflect the club’s atmosphere.\n\n[Technologies Used]\nWordPress, Sass, JavaScript\n\n[Key Features]\n- Dynamic content generation using WordPress\n- Responsive design\n\n[Highlights]\n- Live Feel on the Top View: A video is embedded beneath an image on the top view to create a dynamic, immersive experience.\n- Neon Effect on Mobile: On smartphone screens, event titles have a dual-line effect—one solid line and one blurred line—to enhance the neon aesthetic.",
       "image": "/img/works7.png",
-      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Coding"]
     },
     {
       "title": "Steppin'",
-      "description": "A clean and modern design for a personal portfolio or small business website.",
+      "description": "[Overview]\nI created a blog website for Steppin'. The navigation is designed to ensure that visitors can quickly find the articles they want to read.\n\n[Technologies Used]\nWordPress (Premium Template)\n\n[Key Features]\n- Dynamic content generation using WordPress\n- Responsive design\n\n[Highlights]\n- Designed to clearly convey that the blog serves as an educational resource for beginner programmers.",
       "image": "/img/works1.png",
-      "tags": ["#WordPress", "#design"]
+      "tags": ["#WordPress", "#design"],
+      "url": "https://stepp-1n.com/"
     },
     {
       "title": "Kawagoe Home Smith Show",
-      "description": "A fully responsive e-commerce site with advanced product filtering.",
+      "description": "[Overview]\nI created a landing page for Kawagoe Home Smith Show.\n\n[Technologies Used]\nHTML/CSS, JavaScript\n\n[Key Features]\n- Responsive design\n\n[Highlights]\n- As this was a revision project, I focused on speed to ensure quick delivery.",
       "image": "/img/works9.png",
-      "tags": ["#HTML", "#CSS", "#Javascript", "#Cording"]
+      "tags": ["#HTML", "#CSS", "#Javascript", "#Coding"]
     },
     {
       "title": "Fertum",
-      "description": "A fully responsive WordPress site with a clean and modern design.",
+      "description": "[Overview]\nI created a homepage for FERTUM. As a wine import business, the design prominently features images of wine and barrels.\n\n[Technologies Used]\nWordPress, Sass, JavaScript\n\n[Key Features]\n- Dynamic content generation using WordPress\n- Responsive design\n\n[Highlights]\n- To create a natural and luxurious feel, the background features a wood texture, and the design primarily uses black tones.",
       "image": "/img/works8.png",
-      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Coding"]
     }
   ],
   "skill": {

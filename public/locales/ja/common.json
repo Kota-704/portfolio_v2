@@ -10,33 +10,36 @@
   "works": [
     {
       "title": "セリタホームズ",
-      "description": "洗練されたデザインのレスポンシブなWordPressランディングページ。",
+      "description": "【概要】\nセリタホームズ株式会社のLPを制作しました。企業のブランドイメージを反映しつつ、シンプルで使いやすいUIを意識しました。\n\n【使用技術】\nPHP（WordPress）, Sass, JavaScript, Swiper.js（スライダー実装）, IntersectionObserver（スクロールアニメーション）\n\n【主な機能】\n- WordPressを使った動的コンテンツ生成\n- Contact Form 7 を使用したお問い合わせフォーム\n\n【工夫した点】\n- Swiper.js を用いたスライダーのレスポンシブ対応 & 自動スクロール\n- IntersectionObserver を活用し、遅延読み込みでUX向上",
       "image": "/img/works6.png",
-      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Coding"],
+      "url": "https://this-house.jp/"
     },
     {
       "title": "UTAGE SAPPORO",
-      "description": "洗練されたデザインのレスポンシブなWordPressサイト。",
+      "description": "【概要】\nUTAGE SAPPORO様のHPを制作しました。ネオンのような表現を演出し、クラブのイメージをHPに反映しています。\n\n使用技術:\nWordPress, Sass, JavaScript\n\n主な機能:\n- WordPressを使った動的コンテンツ生成\n- レスポンシブデザイン\n\n工夫した点:\n- TOPビューにて画像の下に動画を埋め込むことでライブ感を演出。\n- スマホ画面ではイベントなどのタイトルの上下に通常の線とぼやかした線を二重で引くことにより、ネオン感を出しています。",
       "image": "/img/works7.png",
-      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Coding"]
     },
     {
       "title": "Steppin'",
-      "description": "個人のポートフォリオや小規模ビジネス向けのモダンデザイン。",
+      "description": "【概要】\nSteppin'様のブログ用HPを制作しました。ブログの閲覧者が見たい記事をすぐに見られるように導線設計を意識しています。\n\n使用技術:\nWordPress(有料テンプレート)\n\n主な機能:\n- WordPressを使った動的コンテンツ生成\n- レスポンシブデザイン\n\n工夫した点:\n- 初心者向けのプログラミング教材であることがわかるようなデザイン設計に。",
       "image": "/img/works1.png",
-      "tags": ["#WordPress", "#デザイン"]
+      "tags": ["#WordPress", "#デザイン"],
+      "url": "https://stepp-1n.com/"
     },
     {
       "title": "川越ホームスミスショー",
-      "description": "高度な商品フィルタリングを備えたレスポンシブなECサイト。",
+      "description": "【概要】\n川越ホームスミスショー様のLPを制作しました。\n\n使用技術:\nHTML/CSS,JavaScript\n\n主な機能:\n- レスポンシブデザイン\n\n工夫した点:\n- 修正案件でしたので、すぐ納品できるようにスピード感を意識して作業を行いました。",
       "image": "/img/works9.png",
-      "tags": ["#HTML", "#CSS", "#Javascript", "#Cording"]
+      "tags": ["#HTML", "#CSS", "#Javascript", "#Coding"],
+      "url": "https://kawagoe-home-smith-show.com/"
     },
     {
       "title": "Fertum",
-      "description": "洗練されたデザインのレスポンシブなWordPressサイト。",
+      "description": "【概要】\nFERTUM様のHPを制作しました。ワインインポート業として、ワインや樽の画像を前面に出しています。\n\n使用技術:\nWordPress, Sass, JavaScript\n\n主な機能:\n- WordPressを使った動的コンテンツ生成\n- レスポンシブデザイン\n\n工夫した点:\n- ナチュラル感と高級感を出すために背景を木目調にし、色は黒を中心としてデザイン。",
       "image": "/img/works8.png",
-      "tags": ["#WordPress", "#Sass", "#Javascript", "#Cording"]
+      "tags": ["#WordPress", "#Sass", "#Javascript", "#Coding"]
     }
   ],
   "skill": {

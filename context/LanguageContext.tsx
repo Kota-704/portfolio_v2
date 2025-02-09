@@ -12,6 +12,7 @@ interface Work {
 }
 
 interface Translations {
+  language: string;
   header: {
     toggleLanguage: string;
   };
@@ -46,6 +47,7 @@ export const LanguageProvider = ({
 }) => {
   const [language, setLanguage] = useState<Language>("en");
   const [translations, setTranslations] = useState<Translations>({
+    language: "en",
     header: { toggleLanguage: "" },
     about: { p1: "", p2: "", p3: "" },
     works: [],

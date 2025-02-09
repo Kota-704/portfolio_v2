@@ -5,6 +5,7 @@ type Work = {
   title: string;
   description: string;
   tags: string[];
+  url?: string;
 };
 
 import Image from "next/image";
@@ -16,7 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export function WorksItem() {
-  const { translations } = useLanguage();
+  const { translations, language } = useLanguage();
   const works = translations.works || [];
 
   return (
@@ -52,7 +53,9 @@ export function WorksItem() {
               <div className="flex-1 p-12">
                 <div className="px-6 py-4 text-gray-700">
                   <h3 className="font-bold text-2xl mb-2">{work.title}</h3>
-                  <p className="text-base">{work.description}</p>
+                  <p className="text-base whitespace-pre-line">
+                    {work.description}
+                  </p>
                 </div>
                 <div className="px-6 py-4">
                   {work.tags.map((tag: string, tagIndex: number) => (
@@ -63,6 +66,16 @@ export function WorksItem() {
                       {tag}
                     </span>
                   ))}
+                </div>
+                <div className="px-6 py-4">
+                  <a
+                    href={work.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+                  >
+                    {language === "ja" ? "サイトを見る" : "View Site"}
+                  </a>
                 </div>
               </div>
             </div>
