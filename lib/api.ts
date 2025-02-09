@@ -31,3 +31,6 @@ export async function contactFormSubmit(data: {
     throw new Error("Failed to submit contact form");
   }
 }
+
+console.log("SERVICE_DOMAIN:", process.env.SERVICE_DOMAIN);
+console.log("API_KEY:", process.env.API_KEY);
