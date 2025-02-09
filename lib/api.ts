@@ -3,7 +3,7 @@ import { BlogListResponse } from "./types";
 
 export const client = createClient({
   serviceDomain: process.env.NEXT_PUBLIC_SERVICE_DOMAIN || "",
-  apiKey: process.env.NEXT_PUBLIC_API_KEY || "",
+  apiKey: process.env.API_KEY || "",
 });
 
 export async function getBlogList() {
