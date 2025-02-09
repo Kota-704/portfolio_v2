@@ -21,7 +21,7 @@ export function WorksItem() {
   const works = translations.works || [];
 
   return (
-    <div className="h-screen bg-white shadow-lg overflow-hidden">
+    <div className="xl:h-screen h-auto bg-white shadow-lg overflow-hidden">
       <div className="max-w-screen-xl mx-auto px-4 py-20">
         <h2 className="text-6xl font-dm-serif text-black">Works</h2>
         <h3 className="text-xl font-relation text-black">
@@ -40,7 +40,7 @@ export function WorksItem() {
       >
         {works.map((work: Work, index: number) => (
           <SwiperSlide key={index}>
-            <div className="flex items-center justify-center -m-4 px-48">
+            <div className="flex items-center justify-center flex-col xl:flex-row m-4 px-48">
               <div className="overflow-hidden flex-1 m-auto">
                 <Image
                   src={work.image}
@@ -67,12 +67,12 @@ export function WorksItem() {
                     </span>
                   ))}
                 </div>
-                <div className="px-6 py-4">
+                <div className="px-6 py-4 flex justify-end">
                   <a
                     href={work.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+                    className="inline-block bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300 text-right"
                   >
                     {language === "ja" ? "サイトを見る" : "View Site"}
                   </a>
