@@ -13,6 +13,7 @@ export function Skill() {
     <section
       ref={sectionRef}
       className={`about-content max-w-screen-xl mx-auto px-4 py-20 ${isSectionVisible ? " animate-fadeIn" : "opacity-0"}`}
+      id="skill"
     >
       <div className="about-content-inner">
         <h2 className="about-title text-6xl font-dm-serif">Skill</h2>

@@ -11,6 +11,7 @@ export default function Works() {
     <section
       ref={sectionRef}
       className={`${isSectionVisible ? "animate-fadeIn" : "opacity-0"}`}
+      id="works"
     >
       <WorksItem />
     </section>
