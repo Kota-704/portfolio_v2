@@ -2,6 +2,7 @@ import Link from "next/link";
 import HeaderList from "../headerList";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import Hamburger from "../hamburger";
+import HamburgerMenu from "../hamburgerMenu";
 
 export default function Header() {
   return (
@@ -22,14 +23,15 @@ export default function Header() {
               <HeaderList href="/#contact" text="CONTACT" />
             </ul>
           </nav>
-          <div className="hamburger relative lg:hidden h-4 w-6 cursor-pointer">
-            <span className="absolute h-px w-6 bg-white top-0 left-0"></span>
-            <span className="absolute h-px w-4 bg-white top-2 left-0"></span>
-            <span className="absolute h-px w-2 bg-white top-4 left-0"></span>
-          </div>
         </div>
       </header>
-      <Hamburger />
+      <HamburgerMenu />
+      <Hamburger
+        isOpen={false}
+        toggleMenu={function (): void {
+          throw new Error("Function not implemented.");
+        }}
+      />
     </>
   );
 }
