@@ -22,7 +22,7 @@ export default function About() {
         <h3 className="text-xl font-relation">
           Who am I and what do I specialize in.
         </h3>
-        <div className="flex justify-around items-center gap-16">
+        <div className="flex flex-col sm:flex-row justify-around items-center gap-16">
           <div className="about-image mt-16">
             <Image
               src="/img/IMG_2757.jpg"

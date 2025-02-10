@@ -27,7 +27,7 @@ export function Skill() {
             >
               {translations.skill.frontend}
             </h3>
-            <ul className="flex flex-wrap gap-10">
+            <ul className="flex flex-wrap gap-5 sm:gap-10">
               <SkillItem image="html.png" text="HTML" />
               <SkillItem image="css.png" text="CSS" />
               <SkillItem image="javascript.png" text="JavaScript" />
@@ -64,9 +64,22 @@ export function Skill() {
             ${language === "ja" ? "font-notosans" : "font-dm-serif"}
             ${language === "ja" ? "text-lg" : "text-xl"}`}
             >
+              CMS
+            </h3>
+            <ul className="flex flex-wrap gap-5 sm:gap-10 mt12">
+              <SkillItem image="Wordpress_icon.png" text="WordPress" />
+              <SkillItem image="github.png" text="MicroCMS" />
+            </ul>
+          </div>
+          <div className="skill__content__item">
+            <h3
+              className={`text-2xl mt-10 mb-4
+            ${language === "ja" ? "font-notosans" : "font-dm-serif"}
+            ${language === "ja" ? "text-lg" : "text-xl"}`}
+            >
               {translations.skill.tools}
             </h3>
-            <ul className="flex flex-wrap gap-10 mt12">
+            <ul className="flex flex-wrap gap-5 sm:gap-10 mt12">
               <SkillItem image="git.png" text="Git" />
               <SkillItem image="github.png" text="GitHub" />
               <SkillItem image="VSCode.png" text="VS Code" />

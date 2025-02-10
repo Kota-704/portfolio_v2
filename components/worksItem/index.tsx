@@ -22,7 +22,7 @@ export function WorksItem() {
 
   return (
     <div className="xl:h-screen h-auto bg-white shadow-lg overflow-hidden">
-      <div className="max-w-screen-xl mx-auto px-4 py-20">
+      <div className="max-w-screen-xl mx-auto px-4 pt-8 sm:py-20">
         <h2 className="text-6xl font-dm-serif text-black">Works</h2>
         <h3 className="text-xl font-relation text-black">
           What I&apos;ve been working on.
@@ -40,7 +40,7 @@ export function WorksItem() {
       >
         {works.map((work: Work, index: number) => (
           <SwiperSlide key={index}>
-            <div className="flex items-center justify-center flex-col xl:flex-row m-4 px-48">
+            <div className="flex items-center justify-center flex-col xl:flex-row m-4 sm:px-48">
               <div className="overflow-hidden flex-1 m-auto">
                 <Image
                   src={work.image}
@@ -50,8 +50,8 @@ export function WorksItem() {
                   className="block h-auto w-full"
                 />
               </div>
-              <div className="flex-1 p-12">
-                <div className="px-6 py-4 text-gray-700">
+              <div className="flex-1 sm:p-12">
+                <div className="px-6 sm:py-4 text-gray-700">
                   <h3 className="font-bold text-2xl mb-2">{work.title}</h3>
                   <p className="text-base whitespace-pre-line">
                     {work.description}
