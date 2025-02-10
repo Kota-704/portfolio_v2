@@ -68,7 +68,7 @@ export function Skill() {
             </h3>
             <ul className="flex flex-wrap gap-5 sm:gap-10 mt12">
               <SkillItem image="Wordpress_icon.png" text="WordPress" />
-              <SkillItem image="github.png" text="MicroCMS" />
+              <SkillItem image="no_image.png" text="MicroCMS" />
             </ul>
           </div>
           <div className="skill__content__item">
